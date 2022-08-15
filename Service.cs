@@ -4,17 +4,22 @@ public class Service: IService
 {
     public object FindElement(IEnumerable<object> data, int index)
     {
-        throw new NotImplementedException();
+        return new List<object>(data).ElementAt(index);
     }
 
     public bool AreTheseStringsEqual(string str1, string str2)
     {
-        throw new NotImplementedException();
+        return str1.Equals(str2);
     }
 
     public int Factorial(int n)
     {
-        throw new NotImplementedException();
+        if (n == 1)
+        {
+            return n;
+        }
+
+        return n * Factorial(n - 1);
     }
 
     public int Fibonacci(int n)
